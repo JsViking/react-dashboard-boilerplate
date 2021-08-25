@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  dashboard:
+    container_name: ${PROJECT_NAME}_dashboard
+    image: ${DOCKER_REGISTRY}/${DASHBOARD_IMAGE_NAME}:${IMAGE_TAG}
+    environment:
+      - BASE_URL=${BASE_URL}
+      - API_URL=${API_URL}
+      - MAIN_GRID_SOCKET_URL={MAIN_GRID_SOCKET_URL}
+      - NGINX_SERVER_NAME=${NGINX_SERVER_NAME}
+    build: .
+    ports:
+      - 127.0.0.1:3777:80

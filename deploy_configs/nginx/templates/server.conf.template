@@ -1,0 +1,11 @@
+server {
+  listen 80 default;
+  server_name ${NGINX_SERVER_NAME};
+
+  root /app;
+  index index.html;
+
+  location / {
+      try_files $uri /index.html;
+  }
+}

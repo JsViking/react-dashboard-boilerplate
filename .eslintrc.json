@@ -1,0 +1,84 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["components", "./src/components"],
+          ["feature", "./src/feature"],
+          ["hook", "./src/hook"],
+          ["libs", "./src/libs"],
+          ["layouts", "./src/layouts"],
+          ["views", "./src/views"]
+        ]
+      }
+    }
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    // "react/no-danger": "off",
+    "semi": [1, "always"],
+    // "no-restricted-syntax": "off",
+    "arrow-parens": "off",
+    "consistent-return": "off",
+    "react/jsx-props-no-spreading": "off",
+    "comma-dangle": [
+      2,
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "camelcase": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/prefer-default-export": "off",
+    "import/export": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "import/no-unresolved": "off",
+    "no-shadow": "warn",
+    "react/react-in-jsx-scope": "warn",
+    "import/extensions": "off",
+    "react/require-default-props": "off",
+    "no-nested-ternary": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-array-index-key": "warn",
+    "import/no-cycle": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "react/destructuring-assignment": "off",
+    "react/display-name":"off"
+  }
+}
